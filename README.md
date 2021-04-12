@@ -1,3 +1,10 @@
 # utils
  
-This is my utils folder. Decided to do this to try and have cleaner code
+
+ These are my Utilities.
+- Cookie Management
+- To Discord
+- To Log
+- Logger
+- To HTML
+- Accurate Time
