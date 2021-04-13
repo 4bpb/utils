@@ -8,3 +8,4 @@
 - Logger
 - To HTML
 - Accurate Time
+- Time Difference
