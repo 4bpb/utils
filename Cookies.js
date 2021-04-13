@@ -64,7 +64,7 @@ let clearCookies= function(file){
 
 
 module.exports = {
-    useCookies,
+    //useCookies,
     saveCookies,
     clearCookies
 };

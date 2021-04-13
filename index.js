@@ -4,7 +4,7 @@ var toLog = require('./toLog.js')
 var accurateTime = require('./accurateTime.js')
 var toDiscord = require('./toDiscord.js')
 var cookies = require('./Cookies')
-
+var unixTime = require('./unix.js')
 
 var saveCookies = cookies.saveCookies
 var useCookies = cookies.useCookies
@@ -38,8 +38,12 @@ saveCookies('Cookies.json','cookie: dfgdgdgdgd')
 
 
 //usecookie will return your current cookies from saved file hopefully lol
-useCookies('Cookies.json')
+//useCookies('Cookies.json')
 
 //clearCookies clears your saved cookies
 clearCookies('Cookies.json')
+
+
+//Unix.js Should be more accurate then the previous time file
+unixTime()
 
