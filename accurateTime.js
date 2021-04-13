@@ -13,7 +13,9 @@ let accurateTime = function(){
         var end = new Date()
         let delay = end-start
         log('Accurate Time From Time.is: '+accurate_time+' With a Response Delay of '+delay+' MS','info')
+        return process.exit(22);
     });
+    
 }
 
 
