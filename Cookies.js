@@ -1,22 +1,35 @@
-const fs = require('fs')
+const fs = require('fs');
+
+
 var log = require('./logger.js')
 
-let useCookies = function(file){
-    fs.readFile(file, 'utf8' , (err, data) => {
-        if (err) {
-            log('Could not get Cookies From '+file, 'err');
-          return
-        }
-        if(data.length === 0){
-            log('No Cookies found in '+file, 'err');
-        } else {
-            log('Fetched Cookies From '+file, 'ok');
-            const cookiesString = fs.readFileSync(file);
-            const cookies = JSON.parse(cookiesString);
-            return cookies
-        }
-      })
-}
+// let useCookies = function(file){
+//     fs.readFile(file, 'utf8' , (err, data) => {
+//         if (err) {
+//             log('Could not get Cookies From '+file, 'err');
+//           return
+//         }
+//         if(data.length === 0){
+//             log('No Cookies found in '+file, 'err');
+//             return
+//         } else {
+//             log('Fetched Cookies From '+file, 'ok');
+//             const cookiesString = fs.readFileSync(file);
+//             const cookies = JSON.parse(cookiesString)
+//             setTimeout(function () {
+//                 return cookies
+//               }, 5000)
+            
+//         }
+
+//       })
+     
+// }
+
+
+
+
+
 
 
 let saveCookies = function(file,CookieData){
@@ -28,6 +41,7 @@ let saveCookies = function(file,CookieData){
             fs.writeFileSync(file, '')
             fs.writeFileSync(file, JSON.stringify(CookieData, null, 2))
             log('Saved Cookies to '+file, 'ok');
+            return
         }
       })
 
@@ -41,8 +55,8 @@ let clearCookies= function(file){
           return
         } else {
             fs.writeFileSync(file, '')
-
             log('Cleared Cookies From '+file, 'ok');
+            return
         }
       })
 
